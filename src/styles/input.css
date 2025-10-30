@@ -13,6 +13,9 @@ body {
   }
 }
 @layer utilities {
+  .click {
+    @apply bg-green-100;
+  }
   .green {
     @apply bg-green-400;
   }
