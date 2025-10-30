@@ -3,14 +3,17 @@ let $wlcDiv = document.querySelector("#wlcDiv");
 
 let $questionBox = document.querySelector("#questionBox");
 
+let $loading = document.querySelector("#loading");
 $startBtn.addEventListener("click", () => {
   $wlcDiv.classList.add("right-[150%]");
 
   $questionBox.classList.add("right-[50%]");
-
+  $loading.classList.remove("hidden");
   fetch("https://parsa-farshah.github.io/quiz-js-json/question.json")
     .then((res) => res.json())
     .then((items) => {
+      $loading.classList.add("hidden");
+
       items.map((item) => {
         let _div = document.createElement("div");
         _div.classList.add("px-4");
@@ -73,10 +76,15 @@ function clickAwnser(s) {
   $click = s.innerText;
 }
 
-let correctFlag = 0;
+let $correctFlag = 0;
+let $clickFlag = 0;
 
 function btnAwnser(s) {
+  console.log($clickFlag);
+
+  $clickFlag++;
   if ($click == "") {
+    $clickFlag--;
     alert("adam bash");
   } else {
     let $p = Array.from(s.parentElement.children);
@@ -87,7 +95,7 @@ function btnAwnser(s) {
 
       if ($click == $dataAnswer) {
         if (p.innerText == $click) {
-          correctFlag++;
+          $correctFlag++;
           p.classList.add("green");
         }
       } else {
@@ -102,10 +110,68 @@ function btnAwnser(s) {
       _divParent.classList.add("absolute");
       _divParent.classList.add("duration-200");
       _divParent.classList.add("bottom-[100%]");
-    }, 2000);
+    }, 1000);
   }
-  console.log(correctFlag);
 
   $dataAnswer = "";
   $click = "";
+
+  let $resDiv = document.querySelector("#resDiv");
+
+  setTimeout(() => {
+    if ($clickFlag == 10) {
+      $questionBox.classList.add("right-[150%]");
+      $resDiv.classList.add("right-[50%]");
+    }
+  }, 500);
 }
+let $resBtn = document.querySelector("#resBtn");
+let $resAnswer = document.querySelector("#resAnswer");
+let $resParnian = document.querySelector("#resParnian");
+$resBtn.addEventListener("click", () => {
+  if ($correctFlag <= 20) {
+    $resAnswer.innerHTML =
+      "مبتدی (Beginner) <br> آشنایی اولیه با سینتکس و مفاهیم پایه مثل متغیر، شرط، آرایه ندارد یا بسیار محدود است.";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+  if (21 <= $correctFlag && 40 >= $correctFlag) {
+    $resAnswer.innerText = "نیمه‌مبتدی (Basic)";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+
+  if (41 <= $correctFlag && 60 >= $correctFlag) {
+    $resAnswer.innerText = "متوسط (Intermediate)";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+
+  if (61 <= $correctFlag && 80 >= $correctFlag) {
+    $resAnswer.innerText = "پیشرفته (Advanced)";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+  if (81 <= $correctFlag && 90 >= $correctFlag) {
+    $resAnswer.innerText = "حرفه‌ای (Professional)";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+  if (91 <= $correctFlag && 100 >= $correctFlag) {
+    $resAnswer.innerText = "حرفه‌ای (Professional)";
+    $resAnswer.classList.remove("hidden");
+    $resAnswer.classList.add("flex");
+
+    $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
+  }
+});

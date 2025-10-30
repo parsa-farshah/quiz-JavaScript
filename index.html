@@ -12,7 +12,17 @@
   </head>
   <body>
     <main class="w-full h-dvh bg-amber-300 overflow-hidden">
-      <h2 class="text-xl font-black p-6">سوالات استخدامی جاوا اسکریپت</h2>
+      <div class="flex items-center gap-3 p-6">
+        <h2 class="text-xl font-black">تست سوالات استخدامی جاوا اسکریپت</h2>
+        <img class="w-11 h-11" src="src/icons/jsBlack.png" alt="" />
+      </div>
+      <!-- loading -->
+      <img
+        id="loading"
+        class="w-[50px] h-[50px] absolute top-[50%] left-1/2 -translate-x-1/2 hidden z-50"
+        src="src/gif/icons8-loading.gif"
+        alt=""
+      />
       <div class="w-full h-full relative">
         <!-- welcome -->
         <div
@@ -51,14 +61,34 @@
             </button>
           </div>
         </div>
+
         <!-- div questions -->
         <div
           id="questionBox"
           class="w-[95%] md:w-[50%] h-[70vh] border absolute right-[-50%] translate-x-1/2 top-0 mt-8 rounded-3xl bg-white duration-700 flex flex-wrap overflow-hidden"
+        ></div>
+        <!-- result -->
+        <div
+          id="resDiv"
+          class="w-[95%] md:w-[50%] border absolute right-[-50%] translate-x-1/2 top-0 py-10 mt-8 rounded-3xl bg-white duration-700 z-50"
         >
-
-            
-
+          <div class="flex items-center justify-center gap-4">
+            <h3 class="text-4xl">نتیجه</h3>
+            <img class="w-9 h-9" src="src/icons/developer.png" alt="" />
+          </div>
+          <h5
+            id="resAnswer"
+            class="text-xl w-[80%] text-center justify-between items-baseline bg-[#bbbbbba6] mt-6 hidden mx-auto px-4 py-2 rounded-md"
+          ></h5>
+          <div id="resParnian" class="text-lg text-center mt-5"></div>
+          <div class="w-full flex justify-center items-center mt-5">
+            <button
+              id="resBtn"
+              class="text-xl cursor-pointer hover:bg-[#d3d3d3] hover:text-blue-500 duration-500 bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              مشاهده نتیجه
+            </button>
+          </div>
         </div>
       </div>
     </main>
