@@ -408,6 +408,10 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;

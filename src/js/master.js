@@ -98,9 +98,13 @@ function btnAwnser(s) {
     });
 
     let _divParent = s.parentElement.parentElement;
-    _divParent.classList.add("absolute");
-    _divParent.classList.add("bottom-[100%]");
+    setTimeout(() => {
+      _divParent.classList.add("absolute");
+      _divParent.classList.add("duration-200");
+      _divParent.classList.add("bottom-[100%]");
+    }, 2000);
   }
+  console.log(correctFlag);
 
   $dataAnswer = "";
   $click = "";
