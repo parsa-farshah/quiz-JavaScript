@@ -25,7 +25,7 @@ $startBtn.addEventListener("click", () => {
         _div.classList.add("duration-300");
         _div.innerHTML = `
         <div class="flex items-center gap-4">
-              <span class="text-2xl">(${item.id})</span>
+              <span class="text-2xl">(${item.id}/100)</span>
               <h1>${item.question}</h1>
             </div>
 
@@ -131,7 +131,7 @@ let $resParnian = document.querySelector("#resParnian");
 $resBtn.addEventListener("click", () => {
   if ($correctFlag <= 20) {
     $resAnswer.innerHTML =
-      "مبتدی (Beginner) <br> آشنایی اولیه با سینتکس و مفاهیم پایه مثل متغیر، شرط، آرایه ندارد یا بسیار محدود است.";
+      "مبتدی (Beginner) <br> آشنایی اولیه با سینتکس و مفاهیم پایه مثل متغیر، شرط، آرایه ندارد یا بسیار محدود است. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -139,7 +139,7 @@ $resBtn.addEventListener("click", () => {
   }
   if (21 <= $correctFlag && 40 >= $correctFlag) {
     $resAnswer.innerHTML =
-      "نیمه‌مبتدی (Basic) <br> مفاهیم پایه مثل توابع، if، حلقه، و نوع داده را می‌داند ولی در ساختارهای پیچیده مثل closure و async مشکل دارد.";
+      "نیمه‌مبتدی (Basic) <br> مفاهیم پایه مثل توابع، if، حلقه، و نوع داده را می‌داند ولی در ساختارهای پیچیده مثل closure و async مشکل دارد. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -148,7 +148,7 @@ $resBtn.addEventListener("click", () => {
 
   if (41 <= $correctFlag && 60 >= $correctFlag) {
     $resAnswer.innerHTML =
-      "متوسط (Intermediate) <br> تسلط نسبی به اصول دارد، می‌تواند پروژه‌های ساده بنویسد اما نیاز به تمرین برای درک event و async دارد.";
+      "متوسط (Intermediate) <br> تسلط نسبی به اصول دارد، می‌تواند پروژه‌های ساده بنویسد اما نیاز به تمرین برای درک event و async دارد. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -157,7 +157,7 @@ $resBtn.addEventListener("click", () => {
 
   if (61 <= $correctFlag && 80 >= $correctFlag) {
     $resAnswer.innerHTML =
-      "پیشرفته (Advanced)<br> درک خوبی از ساختار کد، async، DOM و ساختار داده‌ها دارد و می‌تواند اپلیکیشن‌های متوسط بنویسد.";
+      "پیشرفته (Advanced)<br> درک خوبی از ساختار کد، async، DOM و ساختار داده‌ها دارد و می‌تواند اپلیکیشن‌های متوسط بنویسد. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -165,7 +165,7 @@ $resBtn.addEventListener("click", () => {
   }
   if (81 <= $correctFlag && 90 >= $correctFlag) {
     $resAnswer.innerHTML =
-      "حرفه‌ای (Professional) <br> تسلط بالا به جاوااسکریپت مدرن (ES6+)، async/await، closure، event delegation، و DOM دارد.";
+      "حرفه‌ای (Professional) <br> تسلط بالا به جاوااسکریپت مدرن (ES6+)، async/await، closure، event delegation، و DOM دارد. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -173,7 +173,7 @@ $resBtn.addEventListener("click", () => {
   }
   if (91 <= $correctFlag && 100 >= $correctFlag) {
     $resAnswer.innerHTML =
-      "حرفه‌ای (Professional) <br> مهارت در سطح مصاحبه‌های فنی شرکت‌ها و فریم‌ورک‌ها (React, Node.js, Vue). می‌تواند کد بهینه و تمیز بنویسد.";
+      "حرفه‌ای (Professional) <br> مهارت در سطح مصاحبه‌های فنی شرکت‌ها و فریم‌ورک‌ها (React, Node.js, Vue). می‌تواند کد بهینه و تمیز بنویسد. <br> درصد جواب درست ${$correctFlag}%";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
