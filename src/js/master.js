@@ -119,7 +119,7 @@ function btnAwnser(s) {
   let $resDiv = document.querySelector("#resDiv");
 
   setTimeout(() => {
-    if ($clickFlag == 10) {
+    if ($clickFlag == 100) {
       $questionBox.classList.add("right-[150%]");
       $resDiv.classList.add("right-[50%]");
     }
@@ -138,7 +138,8 @@ $resBtn.addEventListener("click", () => {
     $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
   }
   if (21 <= $correctFlag && 40 >= $correctFlag) {
-    $resAnswer.innerText = "نیمه‌مبتدی (Basic)";
+    $resAnswer.innerHTML =
+      "نیمه‌مبتدی (Basic) <br> مفاهیم پایه مثل توابع، if، حلقه، و نوع داده را می‌داند ولی در ساختارهای پیچیده مثل closure و async مشکل دارد.";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -146,7 +147,8 @@ $resBtn.addEventListener("click", () => {
   }
 
   if (41 <= $correctFlag && 60 >= $correctFlag) {
-    $resAnswer.innerText = "متوسط (Intermediate)";
+    $resAnswer.innerHTML =
+      "متوسط (Intermediate) <br> تسلط نسبی به اصول دارد، می‌تواند پروژه‌های ساده بنویسد اما نیاز به تمرین برای درک event و async دارد.";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
@@ -154,21 +156,24 @@ $resBtn.addEventListener("click", () => {
   }
 
   if (61 <= $correctFlag && 80 >= $correctFlag) {
-    $resAnswer.innerText = "پیشرفته (Advanced)";
+    $resAnswer.innerHTML =
+      "پیشرفته (Advanced)<br> درک خوبی از ساختار کد، async، DOM و ساختار داده‌ها دارد و می‌تواند اپلیکیشن‌های متوسط بنویسد.";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
     $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
   }
   if (81 <= $correctFlag && 90 >= $correctFlag) {
-    $resAnswer.innerText = "حرفه‌ای (Professional)";
+    $resAnswer.innerHTML =
+      "حرفه‌ای (Professional) <br> تسلط بالا به جاوااسکریپت مدرن (ES6+)، async/await، closure، event delegation، و DOM دارد.";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
     $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
   }
   if (91 <= $correctFlag && 100 >= $correctFlag) {
-    $resAnswer.innerText = "حرفه‌ای (Professional)";
+    $resAnswer.innerHTML =
+      "حرفه‌ای (Professional) <br> مهارت در سطح مصاحبه‌های فنی شرکت‌ها و فریم‌ورک‌ها (React, Node.js, Vue). می‌تواند کد بهینه و تمیز بنویسد.";
     $resAnswer.classList.remove("hidden");
     $resAnswer.classList.add("flex");
 
