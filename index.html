@@ -12,7 +12,31 @@
     <link rel="shortcut icon" href="src/icons/js.png" type="image/x-icon" />
   </head>
   <body>
-    <main class="w-full h-dvh bg-amber-300 overflow-hidden">
+    <main class="w-full h-[700px] sm:h-dvh bg-amber-300 overflow-hidden">
+      <!-- error not click on level -->
+      <div
+        id="errorLevel"
+        class="w-full h-full bg-[#00000062] flex justify-center items-center hidden"
+      >
+        <div class="w-[80%] md:w-[30%] bg-[#d30606] rounded-2xl p-10">
+          <img class="w-9 h-9 mx-auto" src="src/icons/error.png" alt="" />
+          <h2 class="text-2xl text-center mt-4">
+            حتما روی یکی از سطح ها کلیک کن مثل راحت یا متوسط یا سخت
+          </h2>
+        </div>
+      </div>
+      <!-- question -->
+      <div
+        id="errorQuestion"
+        class="w-full h-full bg-[#00000062] flex justify-center items-center hidden"
+      >
+        <div class="w-[80%] md:w-[30%] bg-[#d30606] rounded-2xl p-10">
+          <img class="w-9 h-9 mx-auto" src="src/icons/error.png" alt="" />
+          <h2 class="text-2xl text-center mt-4">
+            حتما روی یکی از جواب ها باید کلیک کنی
+          </h2>
+        </div>
+      </div>
       <div class="flex items-center gap-3 p-6">
         <h2 class="text-lg md:text-xl font-black">
           تست سوالات استخدامی جاوا اسکریپت
@@ -23,6 +47,7 @@
           alt=""
         />
       </div>
+
       <!-- loading -->
       <img
         id="loading"
@@ -34,7 +59,7 @@
         <!-- welcome -->
         <div
           id="wlcDiv"
-          class="w-[95%] md:w-[50%] border absolute right-1/2 translate-x-1/2 top-0 py-10 mt-8 rounded-3xl bg-white duration-700"
+          class="w-[95%] md:w-[50%] border absolute right-1/2 translate-x-1/2 top-0 py-10 rounded-3xl bg-white duration-700"
         >
           <div class="flex items-center justify-center gap-4 mx-auto w-full">
             <span class="text-4xl">خوش اومدی </span>
@@ -56,8 +81,30 @@
             هست
           </p>
           <div class="flex items-center justify-center gap-3 mt-8">
-            <h4 class="text-center">برای شروع روی دکمه پایین کلیک کن</h4>
+            <h4 class="text-center">
+              برای شروع اول سطح سوالات انتخاب وسپس روی دکمه شروع تست کلیک کن
+            </h4>
             <!-- <img class="w-7 h-7" src="src/icons/backHand.png" alt="" /> -->
+          </div>
+          <div class="flex justify-center gap-5 mt-7">
+            <button
+              id="easy"
+              class="px-4 py-2 text-xl cursor-pointer hover:bg-[#16e643a8] duration-500 bg-green-500 text-white rounded-md"
+            >
+              آسون
+            </button>
+            <button
+              id="normal"
+              class="px-4 py-2 text-xl cursor-pointer hover:bg-[#0099ffa8] duration-500 bg-blue-600 text-white rounded-md"
+            >
+              متوسط
+            </button>
+            <button
+              id="hard"
+              class="px-4 py-2 text-xl cursor-pointer hover:bg-[#ff0606a8] duration-500 bg-red-700 text-white rounded-md"
+            >
+              سخت
+            </button>
           </div>
           <div class="flex justify-center mt-9">
             <button
@@ -99,6 +146,58 @@
         </div>
       </div>
     </main>
+    <!-- my social -->
+    <footer class="w-full h-fit flex justify-center bg-amber-300 items-center py-10 ">
+      <div
+        class="w-[300px] h-[470px] bg-[#cccccce0] rounded-4xl overflow-hidden"
+      >
+        <img
+          class="w-full h-[70%] object-cover object-top rounded-4xl"
+          src="src/images/me.PNG"
+          alt=""
+        />
+        <h2 class="text-center capitalize mt-3">Parsa Dehghan Pour</h2>
+        <h2 class="text-center capitalize text-[#00000069]">
+          Front End developer
+        </h2>
+        <h2 class="text-center capitalize" dir="ltr">connect With me:</h2>
+        <ul class="flex w-full justify-around py-1">
+          <li>
+            <a href="http://github.com/parsa-farshah" target="_blank">
+              <img
+                class="w-[45px] h-[45px] hover:scale-125 transition-all duration-500"
+                src="src/icons/github2.png"
+                alt="GitHub"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/parsa_dehghanpour_dv"
+              target="_blank"
+            >
+              <img
+                class="w-[45px] h-[45px] hover:scale-125 transition-all duration-500"
+                src="src/icons/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://linkedin.com/in/parsa-dehghan-pour-farashah-85ab04250"
+              target="_blank"
+            >
+              <img
+                class="w-[45px] h-[45px] hover:scale-125 transition-all duration-500"
+                src="src/icons/linkedin.png"
+                alt="LinkedIn"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
   <script src="src/js/master.js"></script>
 </html>

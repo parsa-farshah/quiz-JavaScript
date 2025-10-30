@@ -22,6 +22,16 @@ body {
   .red {
     @apply bg-red-600;
   }
+
+  .greenClick {
+    @apply bg-green-800;
+  }
+  .blueClick {
+    @apply bg-blue-900;
+  }
+  .redClick {
+    @apply bg-red-900;
+  }
 }
 @layer components {
 }
