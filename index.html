@@ -16,7 +16,7 @@
       <!-- error not click on level -->
       <div
         id="errorLevel"
-        class="w-full h-full bg-[#00000062] flex justify-center items-center hidden"
+        class="w-full h-full bg-[#00000062] backdrop-blur-sm fixed z-50 justify-center items-center hidden"
       >
         <div class="w-[80%] md:w-[30%] bg-[#d30606] rounded-2xl p-10">
           <img class="w-9 h-9 mx-auto" src="src/icons/error.png" alt="" />
@@ -28,7 +28,7 @@
       <!-- question -->
       <div
         id="errorQuestion"
-        class="w-full h-full bg-[#00000062] flex justify-center items-center hidden"
+        class="w-full h-full bg-[#00000062] backdrop-blur-sm fixed z-50 justify-center items-center hidden"
       >
         <div class="w-[80%] md:w-[30%] bg-[#d30606] rounded-2xl p-10">
           <img class="w-9 h-9 mx-auto" src="src/icons/error.png" alt="" />
@@ -147,7 +147,9 @@
       </div>
     </main>
     <!-- my social -->
-    <footer class="w-full h-fit flex justify-center bg-amber-300 items-center py-10 ">
+    <footer
+      class="w-full h-fit flex justify-center bg-amber-300 items-center py-10"
+    >
       <div
         class="w-[300px] h-[470px] bg-[#cccccce0] rounded-4xl overflow-hidden"
       >

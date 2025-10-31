@@ -1,8 +1,11 @@
 # آزمون  آنلاین سوالات استخدامی مصاحبه جاوا اسکریپت
 
 یک آزمون آنلاین ساختم بر سوالات استخدامی جاوا اسکریپت آموزشگاه پرنیان میتونید بسنجید جاوا اسکریپت رو چقدر بلدید و اینکه 3تا سطح داره :
+
 آسان = 25 سوال
+
 متوسط = 50 سوال
+
 سخت = 100 سوال
 
 و در آخر برای مشاهده نتیجه کلیک میکنید و تعداد سوالات درست که زدید و سطحتان رو میگه
@@ -44,25 +47,20 @@
 
 ## 📸 Screenshots  
 ### 🌟 Overview  
-<img src="src/images/cover.jpg" width="100%" alt="3D Calculator Overview"/>  
+<img src="src/images/cover.png" width="100%" alt="3D Calculator Overview"/>  
 
-### 💻 Desktop View Light Mode 
-<img src="src/images/1.jpg" width="100%" alt="3D Calculator Desktop"/>  
+### 💻 Desktop View 
+<img src="src/images/1.png" width="100%" alt="3D Calculator Desktop"/>  
 
-### 💻 Desktop View Dark Mode 
-<img src="src/images/2.jpg" width="100%" alt="3D Calculator Desktop"/>  
+### 💻 Desktop View 
+<img src="src/images/2.png" width="100%" alt="3D Calculator Desktop"/>  
 
-### 📱 Tablet View Light Mode
-<img src="src/images/3.jpg" width="70%" alt="3D Calculator Tablet"/>  
+### 💻 Desktop View 
+<img src="src/images/3.png" width="100%" alt="3D Calculator Desktop"/>  
 
-### 📱 Tablet View Dark Mode
-<img src="src/images/4.jpg" width="70%" alt="3D Calculator Tablet"/> 
+### 💻 Desktop View 
+<img src="src/images/4.png" width="100%" alt="3D Calculator Desktop"/>  
 
-### 📱 Mobile View Light Mode
-<img src="src/images/5.jpg" width="45%" alt="3D Calculator Mobile"/>  
-
-### 📱 Mobile View Dark Mode
-<img src="src/images/6.jpg" width="45%" alt="3D Calculator Mobile"/>  
 
 ---
 
