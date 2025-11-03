@@ -48,7 +48,6 @@ $startBtn.addEventListener("click", () => {
           let _div = document.createElement("div");
           _div.classList.add("px-4");
           _div.classList.add("w-full");
-          _div.classList.add("bg-orange-400");
           _div.classList.add("h-full");
           _div.classList.add("py-7");
           _div.classList.add("bg-white");
