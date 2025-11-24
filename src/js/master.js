@@ -164,8 +164,10 @@ function btnAwnser(s) {
 let $resBtn = document.querySelector("#resBtn");
 let $resAnswer = document.querySelector("#resAnswer");
 let $resParnian = document.querySelector("#resParnian");
+let $resstBtn = document.querySelector("#resstBtn");
 $resBtn.addEventListener("click", () => {
   $resBtn.classList.add("hidden");
+  $resstBtn.classList.remove("hidden");
   if ($correctFlag <= $Number / 5) {
     $resAnswer.innerHTML = `مبتدی (Beginner) <br> آشنایی اولیه با سینتکس و مفاهیم پایه مثل متغیر، شرط، آرایه ندارد یا بسیار محدود است. <br> درصد جواب درست ${$correctFlag}%`;
     $resAnswer.classList.remove("hidden");
@@ -210,4 +212,8 @@ $resBtn.addEventListener("click", () => {
 
     $resParnian.innerHTML = `<h4 class="text-xl text-[#292929c0]">اگه واقعا میخوای واقعا فرانت اند کامل یاد بگیری بهتره توی آموزشگاه <a class="text-4xl text-blue-600 hover:text-blue-300 duration-500" href="https://trainingsitedesign.ir/learn-web-design/">پرنیان</a> آموزش ببینی</h4>`;
   }
+});
+
+$resstBtn.addEventListener("click", () => {
+  location.reload();
 });
