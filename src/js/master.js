@@ -165,6 +165,7 @@ let $resBtn = document.querySelector("#resBtn");
 let $resAnswer = document.querySelector("#resAnswer");
 let $resParnian = document.querySelector("#resParnian");
 $resBtn.addEventListener("click", () => {
+  $resBtn.classList.add("hidden");
   if ($correctFlag <= $Number / 5) {
     $resAnswer.innerHTML = `مبتدی (Beginner) <br> آشنایی اولیه با سینتکس و مفاهیم پایه مثل متغیر، شرط، آرایه ندارد یا بسیار محدود است. <br> درصد جواب درست ${$correctFlag}%`;
     $resAnswer.classList.remove("hidden");
